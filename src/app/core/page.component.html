@@ -1,0 +1,20 @@
+
+<div class="container text-center">
+  <div class="card ">
+      <div class="card-header">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Welcome</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">See transactions</a>
+      </div>
+    <div class="card-footer text-muted">
+        You have {{total$|async}} transactions
+    </div>
+  </div>
+  <div class="row row-cols-1 mt row-cols-md-1 g-4">
+    <app-card *ngFor="let item of (selectedType$|async); trackBy: trackByFn; index as i" [type]="item" [index]="i" class="col mt-2">{{item}}
+    </app-card>
+  </div>
+</div>
+

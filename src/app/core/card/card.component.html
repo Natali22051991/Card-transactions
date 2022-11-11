@@ -1,0 +1,8 @@
+  <div class="card">
+      <div class="card-body pt-1" >
+        <h5  class="card-title">{{(data$|async).length}}</h5>
+        <p class="card-text"><ng-content></ng-content></p>
+        <a routerLink="navigator" [queryParams]="{tab:index}" class="btn btn-primary">See all</a>
+      </div>
+    </div>
+
